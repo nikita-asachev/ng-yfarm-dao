@@ -9,3 +9,6 @@ node_modules
 coverage
 coverage.json
 yarn-error.log
+build
+ci
+e2e
