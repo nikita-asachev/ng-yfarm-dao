@@ -42,7 +42,7 @@ contract VaultRecoverable is IVaultRecoverable, EtherTokenConstant, IsContract {
     }
 
     /**
-    * @dev By default deriving from AragonApp makes it recoverable
+    * @dev By default deriving from DaoApp makes it recoverable
     * @param token Token address that would be recovered
     * @return bool whether the app allows the recovery
     */

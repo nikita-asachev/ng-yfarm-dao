@@ -4,12 +4,12 @@ import "../lib/ens/AbstractENS.sol";
 import "../lib/ens/PublicResolver.sol";
 import "./ENSConstants.sol";
 
-import "../apps/AragonApp.sol";
+import "../apps/DaoApp.sol";
 
 
 /* solium-disable function-order */
 // Allow public initialize() to be first
-contract ENSSubdomainRegistrar is AragonApp, ENSConstants {
+contract ENSSubdomainRegistrar is DaoApp, ENSConstants {
     /* Hardcoded constants to save gas
     bytes32 public constant CREATE_NAME_ROLE = keccak256("CREATE_NAME_ROLE");
     bytes32 public constant DELETE_NAME_ROLE = keccak256("DELETE_NAME_ROLE");

@@ -3,7 +3,7 @@ pragma solidity 0.4.24;
 import "../lib/ens/AbstractENS.sol";
 import "../ens/ENSSubdomainRegistrar.sol";
 import "../factory/AppProxyFactory.sol";
-import "../apps/AragonApp.sol";
+import "../apps/DaoApp.sol";
 import "../acl/ACL.sol";
 import "./Repo.sol";
 
@@ -15,7 +15,7 @@ contract APMInternalAppNames {
 }
 
 
-contract APMRegistry is AragonApp, AppProxyFactory, APMInternalAppNames {
+contract APMRegistry is DaoApp, AppProxyFactory, APMInternalAppNames {
     /* Hardcoded constants to save gas
     bytes32 public constant CREATE_REPO_ROLE = keccak256("CREATE_REPO_ROLE");
     */

@@ -1,6 +1,6 @@
 pragma solidity 0.4.24;
 
-import "../apps/AragonApp.sol";
+import "../apps/DaoApp.sol";
 import "../common/ConversionHelpers.sol";
 import "../common/TimeHelpers.sol";
 import "./ACLSyntaxSugar.sol";
@@ -10,7 +10,7 @@ import "./IACLOracle.sol";
 
 /* solium-disable function-order */
 // Allow public initialize() to be first
-contract ACL is IACL, TimeHelpers, AragonApp, ACLHelpers {
+contract ACL is IACL, TimeHelpers, DaoApp, ACLHelpers {
     /* Hardcoded constants to save gas
     bytes32 public constant CREATE_PERMISSIONS_ROLE = keccak256("CREATE_PERMISSIONS_ROLE");
     */

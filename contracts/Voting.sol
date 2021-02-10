@@ -4,7 +4,7 @@
 
 pragma solidity 0.4.24;
 
-import "./lib/apps/AragonApp.sol";
+import "./lib/apps/DaoApp.sol";
 import "./lib/common/IForwarder.sol";
 
 import "./lib/lib/math/SafeMath.sol";
@@ -13,7 +13,7 @@ import "./lib/lib/math/SafeMath64.sol";
 import "./lib/minime/contracts/MiniMeToken.sol";
 
 
-contract Voting is IForwarder, AragonApp {
+contract Voting is IForwarder, DaoApp {
   using SafeMath for uint256;
   using SafeMath64 for uint64;
 

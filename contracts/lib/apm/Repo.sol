@@ -1,11 +1,11 @@
 pragma solidity 0.4.24;
 
-import "../apps/AragonApp.sol";
+import "../apps/DaoApp.sol";
 
 
 /* solium-disable function-order */
 // Allow public initialize() to be first
-contract Repo is AragonApp {
+contract Repo is DaoApp {
     /* Hardcoded constants to save gas
     bytes32 public constant CREATE_VERSION_ROLE = keccak256("CREATE_VERSION_ROLE");
     */

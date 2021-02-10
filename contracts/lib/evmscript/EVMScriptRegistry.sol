@@ -1,6 +1,6 @@
 pragma solidity 0.4.24;
 
-import "../apps/AragonApp.sol";
+import "../apps/DaoApp.sol";
 import "./ScriptHelpers.sol";
 import "./IEVMScriptExecutor.sol";
 import "./IEVMScriptRegistry.sol";
@@ -8,7 +8,7 @@ import "./IEVMScriptRegistry.sol";
 
 /* solium-disable function-order */
 // Allow public initialize() to be first
-contract EVMScriptRegistry is IEVMScriptRegistry, EVMScriptRegistryConstants, AragonApp {
+contract EVMScriptRegistry is IEVMScriptRegistry, EVMScriptRegistryConstants, DaoApp {
     using ScriptHelpers for bytes;
 
     /* Hardcoded constants to save gas
