@@ -15,10 +15,14 @@ import {
   MatToolbarModule
 } from '@angular/material';
 import {UtilModule} from './util/util.module';
+import { DemoVotingComponent } from './pages/demo-voting/demo-voting.component';
+import { VoteOverlayComponent } from './components/vote-overlay/vote-overlay.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DemoVotingComponent,
+    VoteOverlayComponent
   ],
   imports: [
     BrowserAnimationsModule,
