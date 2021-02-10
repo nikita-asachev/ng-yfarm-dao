@@ -5,7 +5,9 @@ var Uint256Helpers = artifacts.require('./lib/common/Uint256Helpers.sol');
 
 
 module.exports = function(deployer) {
-  deployer.deploy([UnstructuredStorage, Uint256Helpers]);
-  deployer.autoLink();
+  deployer.deploy(UnstructuredStorage);
+  deployer.deploy(Uint256Helpers);
+  deployer.link(UnstructuredStorage, Voting);
+  deployer.link(Uint256Helpers, Voting);
   deployer.deploy(Voting);
 };

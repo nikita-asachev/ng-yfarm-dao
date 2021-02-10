@@ -14,6 +14,7 @@ import {
   MatInputModule,
   MatToolbarModule
 } from '@angular/material';
+import {UtilModule} from './util/util.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    MetaModule
+    MetaModule,
+    UtilModule
   ],
   providers: [],
   bootstrap: [AppComponent]
