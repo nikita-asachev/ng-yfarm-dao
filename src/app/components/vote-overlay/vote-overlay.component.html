@@ -1,1 +1,27 @@
-<p>vote-overlay works!</p>
+<h1 mat-dialog-title>Adding pool to whitelist</h1>
+<div mat-dialog-content>
+  <p>Token A</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="dialogData.tokenA">
+  </mat-form-field>
+
+  <p>Token B</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="dialogData.tokenB">
+  </mat-form-field>
+
+  <p>Liquidity Pool Token</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="dialogData.liquidityPoolToken">
+  </mat-form-field>
+
+  <p>Staking Contract Address</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="dialogData.stakingContractAddress">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="dialogData">Save</button>
+</div>

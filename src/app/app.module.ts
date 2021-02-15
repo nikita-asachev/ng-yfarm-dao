@@ -17,12 +17,15 @@ import {
 import {UtilModule} from './util/util.module';
 import { DemoVotingComponent } from './pages/demo-voting/demo-voting.component';
 import { VoteOverlayComponent } from './components/vote-overlay/vote-overlay.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { OverlayDialogComponent } from './components/overlay-dialog/overlay-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoVotingComponent,
-    VoteOverlayComponent
+    VoteOverlayComponent,
+    OverlayDialogComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -36,7 +39,11 @@ import { VoteOverlayComponent } from './components/vote-overlay/vote-overlay.com
     FormsModule,
     HttpClientModule,
     MetaModule,
-    UtilModule
+    UtilModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    VoteOverlayComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

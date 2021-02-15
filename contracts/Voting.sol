@@ -123,7 +123,10 @@ contract Voting is IForwarder, DaoApp {
   * @param _metadata Vote metadata
   * @return voteId Id for newly created vote
   */
-  function newVote(bytes _executionScript, string _metadata) external auth(CREATE_VOTES_ROLE) returns (uint256 voteId) {
+//  function newVote(bytes _executionScript, string _metadata) external auth(CREATE_VOTES_ROLE) returns (uint256 voteId) {
+//    return _newVote(_executionScript, _metadata, true, true);
+//  }
+  function newVote(bytes _executionScript, string _metadata) external returns (uint256 voteId) {
     return _newVote(_executionScript, _metadata, true, true);
   }
 
@@ -135,9 +138,16 @@ contract Voting is IForwarder, DaoApp {
   * @param _executesIfDecided Whether to also immediately execute newly created vote if decided
   * @return voteId id for newly created vote
   */
+//  function newVote(bytes _executionScript, string _metadata, bool _castVote, bool _executesIfDecided)
+//  external
+//  auth(CREATE_VOTES_ROLE)
+//  returns (uint256 voteId)
+//  {
+//    return _newVote(_executionScript, _metadata, _castVote, _executesIfDecided);
+//  }
+
   function newVote(bytes _executionScript, string _metadata, bool _castVote, bool _executesIfDecided)
   external
-  auth(CREATE_VOTES_ROLE)
   returns (uint256 voteId)
   {
     return _newVote(_executionScript, _metadata, _castVote, _executesIfDecided);
@@ -332,7 +342,7 @@ contract Voting is IForwarder, DaoApp {
 
     if (_executesIfDecided && _canExecute(_voteId)) {
       // We've already checked if the vote can be executed with `_canExecute()`
-      _unsafeExecuteVote(_voteId);
+//      _unsafeExecuteVote(_voteId);
     }
   }
 
