@@ -7,6 +7,8 @@ import {Subscription} from 'rxjs';
 declare let require: any;
 const voting_artifact = require('../../../../build/contracts/Voting.json');
 
+const { installNewApp } = require('../../../../test/helpers/apps');
+
 const BN = require('bn.js');
 
 @Component({
@@ -40,6 +42,8 @@ export class DemoVotingComponent implements OnInit {
         //   console.error('err = ', err);
         // });
         console.log('Deployed ', deployed);
+
+        await deployed.at(await installNewApp)
       });
     });
   }
@@ -76,7 +80,7 @@ export class DemoVotingComponent implements OnInit {
       const deployedVoting = await this.votingContract.deployed();
       console.log('Deployed voting ', deployedVoting);
       console.log('account = ', this.model.account);
-      const transaction = await deployedVoting.newVote.sendTransaction('0x0000000000000000000000000000000000000000', 'question', {from: this.model.account});
+      const transaction = await deployedVoting.newVote('0x00000001ad05f8e086cb6a12c333c30d60f70b3c5436a86a0000000461461954', '', {from: this.model.account});
       console.log('trans = ', transaction);
 
       // console.log('Transaction = ', transaction);
